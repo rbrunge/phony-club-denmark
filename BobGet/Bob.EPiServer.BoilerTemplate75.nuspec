@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Bob.EPiServer.BoilerTemplate75</id>
+    <version>1.0</version>
+    <authors>Robert Runge</authors>
+    <owners>Robert Runge</owners>
+    <iconUrl>http://www.gravatar.com/avatar/342b78d8f1827ec724d0bc84d7bf40ee.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Build a communication site fast. Get the first page up and running in only a few minutes. Adds classes to an existing EPiServer MVC web-project which will get you started really fast</description>
+    <tags>MVC5 boilertemplate template Twitter-Boostrap jQuery</tags>
+<!--
+    <dependencies>
+	<dependency id="Microsoft.AspNet.Mvc" version="5.1.2" />
+      <dependency id="EPiServer.Search" version="1.0" />
+	  <dependency id="ImageResizer.Mvc" version="3.4.3" />
+	  <dependency id="ImageResizer.MvcWebConfig" version="3.4.3" />
+      <dependency id="ImageResizer.Plugins.EPiServerBlobReader" version="1.0" />
+	  <dependency id="EPiServer.LiveMonitor" version="1.0" />
+	  <dependency id="PeachFrontIndustries.Parrot" version="7.5" />
+	  <dependency id="bootstrap" version="3.1.1" />
+    </dependencies>
+	  -->
+  </metadata>
+</package>

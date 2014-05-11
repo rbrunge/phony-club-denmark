@@ -1,0 +1,8 @@
+\obj\
+\bin\
+\app_data\
+global.asax
+global.asax.cs
+ResourcesModels.Designer.cs
+ResourcesLabels.Designer.cs
+AssemblyInfo.cs

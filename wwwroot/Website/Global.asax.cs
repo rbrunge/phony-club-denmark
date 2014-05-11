@@ -1,7 +1,6 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace Website
+namespace PhonyClubDenmark.Website
 {
     public class Global : EPiServer.Global
     {

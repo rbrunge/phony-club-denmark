@@ -249,10 +249,10 @@
       <DependentUpon>ResourcesModels.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\ResourceLabels.Designer.cs">
+    <Compile Include="Views\ResourcesLabels.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ResourceLabels.resx</DependentUpon>
+      <DependentUpon>ResourcesLabels.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -287,9 +287,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourcesModels.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ResourceLabels.resx">
+    <EmbeddedResource Include="Views\ResourcesLabels.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ResourceLabels.Designer.cs</LastGenOutput>
+      <LastGenOutput>ResourcesLabels.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ProjectExtensions>

@@ -1,0 +1,5 @@
+﻿User-agent: * 
+Disallow: /sog/
+Disallow: /search/
+Disallow: /suchen/
+Disallow: *language=*

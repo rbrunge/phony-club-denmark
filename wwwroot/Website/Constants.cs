@@ -17,6 +17,8 @@
         public static class GroupNames
         {
             public const string MetaData = "GroupNames_Metadata";
+            public const string Specialized = "GroupNames_Specialized";
+            public const string Default = "GroupNames_Default";
         }
     }
 }

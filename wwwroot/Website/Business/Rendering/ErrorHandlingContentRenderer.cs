@@ -7,9 +7,8 @@ using EPiServer.DataAbstraction;
 using EPiServer.Security;
 using EPiServer.Web.Mvc;
 using EPiServer.XForms;
-using PhonyClubDenmark.Models.ViewModels;
 
-namespace PhonyClubDenmark.Business.Rendering
+namespace PhonyClubDenmark.Website.Business.Rendering
 {
     /// <summary>
     /// Wraps an MvcContentRenderer and adds error handling to ensure that blocks and other content
@@ -106,7 +105,7 @@ namespace PhonyClubDenmark.Business.Rendering
         {
             if (PrincipalInfo.HasEditAccess)
             {
-                var errorModel = new ContentRenderingErrorModel(contentData, renderingException);
+                //var errorModel = new ContentRenderingErrorModel(contentData, renderingException);
                 throw new NotImplementedException();
                 // todo: roru, 2 parameters
                 // helper.RenderPartial("TemplateError", errorModel);

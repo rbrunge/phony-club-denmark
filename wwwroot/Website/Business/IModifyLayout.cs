@@ -1,6 +1,6 @@
-﻿using PhonyClubDenmark.Models.ViewModels;
+﻿using PhonyClubDenmark.Website.Models.ViewModels;
 
-namespace PhonyClubDenmark.Business
+namespace PhonyClubDenmark.Website.Business
 {
     /// <summary>
     /// Defines a method which may be invoked by PageContextActionFilter allowing controllers

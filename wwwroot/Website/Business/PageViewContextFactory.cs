@@ -3,11 +3,11 @@ using System.Web.Routing;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.Web.Routing;
-using PhonyClubDenmark.Helpers;
-using PhonyClubDenmark.Models.Pages;
-using PhonyClubDenmark.Models.ViewModels;
+using PhonyClubDenmark.Website.Helpers;
+using PhonyClubDenmark.Website.Models.Pages;
+using PhonyClubDenmark.Website.Models.ViewModels;
 
-namespace PhonyClubDenmark.Business
+namespace PhonyClubDenmark.Website.Business
 {
     public class PageViewContextFactory
     {
@@ -21,19 +21,20 @@ namespace PhonyClubDenmark.Business
 
         public virtual LayoutModel CreateLayoutModel(ContentReference currentContentLink, RequestContext requestContext)
         {
+            if (ContentReference.StartPage.ID == 0)
+                return null;
+
             var startPage = _contentLoader.Get<StartPage>(ContentReference.StartPage);
 
             return new LayoutModel
             {
-                MenuTopPages = startPage.MenuTopPageLinks,
+                // MenuTopPages = startPage.MenuTopPageLinks,
                 SearchPageRouteValues = requestContext.GetPageRoute(startPage.SearchPageLink),
                 SearchPageLink = startPage.SearchPageLink,
 
                 // header
                 SearchLabel = startPage.SearchLabel,
                 SearchPlaceholderLabel = startPage.SearchPlaceholderLabel,
-                HomeBankingReference = startPage.HomeBankingReference,
-                HomeBankingButtonText = startPage.HomeBankingButtonText,
                 LogoAlternativeText = startPage.LogoAlternativeText,
 
                 // footer

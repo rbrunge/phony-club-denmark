@@ -1,0 +1,72 @@
+﻿@using EPiServer.Framework.Web.Mvc.Html
+@using PhonyClubDenmark.Website.Helpers
+@model PhonyClubDenmark.Website.Models.ViewModels.IPageViewModel<PhonyClubDenmark.Website.Models.Pages.SitePageData>
+<!DOCTYPE html>
+<html lang="@Model.CurrentPage.LanguageBranch">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="@Model.CurrentPage.MetaDescription.ToShortenString(170, true)">
+
+    <title>@Model.CurrentPage.MetaTitle</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" />
+    <link href="/Content/cover.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/Site.css?v=@WebsiteHelper.GetVersion()" media="all">
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="SHORTCUT ICON" href="/favicon.ico" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <!-- include HTML5 IE enabling script and stylesheet for IE -->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="/content/ie.css" media="screen"/><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="/scripts/ie.js"></script><![endif]-->
+    <script>
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style');
+            msViewportStyle.appendChild(document.createTextNode('@@-ms-viewport{width:auto!important}'));
+            document.querySelector('head').appendChild(msViewportStyle);
+        }
+    </script>
+    @RenderSection("GlobalScript", required: false)
+
+    @Html.RequiredClientResources("_Header") @*Enable components to require resources. For an example, see the view for VideoBlock.*@
+</head>
+
+<body class="@Model.CurrentPage.Name">
+
+
+    @Html.RenderEPiServerQuickNavigator()
+    @Html.FullRefreshPropertiesMetaData()
+
+    @if (!Model.Layout.HideHeader)
+    {
+        Html.RenderPartial("_Header", Model);
+    }
+    @RenderBody()
+
+    @if (!Model.Layout.HideFooter)
+    {
+        Html.RenderPartial("_Footer", Model);
+        @Html.RequiredClientResources("_Footer")
+    }
+
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/mvc/5.0/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="/Scripts/docs.min.js"></script>
+    <script src="~/Scripts/website.main.js?v=@WebsiteHelper.GetVersion()"></script>
+
+
+</body>
+</html>

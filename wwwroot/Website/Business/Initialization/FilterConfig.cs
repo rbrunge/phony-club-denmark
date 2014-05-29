@@ -3,7 +3,7 @@ using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 
-namespace PhonyClubDenmark.Business.Initialization
+namespace PhonyClubDenmark.Website.Business.Initialization
 {
     /// <summary>
     /// Module for registering filters which will be applied to controller actions.

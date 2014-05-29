@@ -1,8 +1,9 @@
 ﻿using EPiServer.ServiceLocation;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
+using PhonyClubDenmark.Website.Controllers;
 
-namespace PhonyClubDenmark.Business.Rendering
+namespace PhonyClubDenmark.Website.Business.Rendering
 {
     [ServiceConfiguration(typeof(IViewTemplateModelRegistrator))]
     public class TemplateCoordinator : IViewTemplateModelRegistrator

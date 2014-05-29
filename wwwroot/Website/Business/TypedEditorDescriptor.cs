@@ -1,9 +1,8 @@
-﻿using System;
-using EPiServer.Core;
+﻿using EPiServer.Core;
 using EPiServer.Shell.ObjectEditing.EditorDescriptors;
-using PhonyClubDenmark.Models.Blocks;
+using PhonyClubDenmark.Website.Models.Blocks;
 
-namespace PhonyClubDenmark.Business
+namespace PhonyClubDenmark.Website.Business
 {
     [EditorDescriptorRegistration(TargetType = typeof(ContentArea), UIHint = "OnlyJumbotrons")]
     public class TypedEditorDescriptor : EditorDescriptor 

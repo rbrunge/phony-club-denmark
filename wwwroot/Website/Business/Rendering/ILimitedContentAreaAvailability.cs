@@ -1,4 +1,4 @@
-﻿namespace PhonyClubDenmark.Business.Rendering
+﻿namespace PhonyClubDenmark.Website.Business.Rendering
 {
     /// <summary>
     /// Defines a property by which a page or block can require a minimum width when

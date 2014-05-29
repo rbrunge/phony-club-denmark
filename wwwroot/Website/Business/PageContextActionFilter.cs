@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
 using EPiServer.Web.Routing;
-using PhonyClubDenmark.Models.Pages;
-using PhonyClubDenmark.Models.ViewModels;
+using PhonyClubDenmark.Website.Models.Pages;
+using PhonyClubDenmark.Website.Models.ViewModels;
 
-namespace PhonyClubDenmark.Business
+namespace PhonyClubDenmark.Website.Business
 {
     /// <summary>
     /// Intercepts actions with view models of type IPageViewModel and populates the view models

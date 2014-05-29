@@ -4,10 +4,10 @@ using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Mvc.Html;
-using PhonyClubDenmark.Business.Rendering;
+using PhonyClubDenmark.Website.Business.Rendering;
 using StructureMap;
 
-namespace PhonyClubDenmark.Business.Initialization
+namespace PhonyClubDenmark.Website.Business.Initialization
 {
     [InitializableModule]
     public class DependencyResolverInitialization : IConfigurableModule

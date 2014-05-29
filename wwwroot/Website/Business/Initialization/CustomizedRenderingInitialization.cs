@@ -3,9 +3,9 @@ using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
-using PhonyClubDenmark.Business.Rendering;
+using PhonyClubDenmark.Website.Business.Rendering;
 
-namespace PhonyClubDenmark.Business.Initialization
+namespace PhonyClubDenmark.Website.Business.Initialization
 {
     /// <summary>
     /// Module for customizing templates and rendering.

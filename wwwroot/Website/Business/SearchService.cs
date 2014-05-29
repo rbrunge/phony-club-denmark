@@ -6,10 +6,9 @@ using EPiServer.Search;
 using EPiServer.Search.Queries;
 using EPiServer.Search.Queries.Lucene;
 using EPiServer.Security;
-using System.Linq;
-using PhonyClubDenmark.Models.Pages;
+using PhonyClubDenmark.Website.Models.Pages;
 
-namespace PhonyClubDenmark.Business
+namespace PhonyClubDenmark.Website.Business
 {
    public class SearchService
     {

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 
-namespace PhonyClubDenmark.Business.Rendering
+namespace PhonyClubDenmark.Website.Business.Rendering
 {
     /// <summary>
     /// Extends the Razor view engine to include the folders ~/Views/Shared/Blocks/ and ~/Views/Shared/PagePartials/

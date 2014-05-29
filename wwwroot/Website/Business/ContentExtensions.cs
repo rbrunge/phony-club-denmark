@@ -8,7 +8,7 @@ using EPiServer.ServiceLocation;
 using EPiServer.SpecializedProperties;
 using EPiServer.Web;
 
-namespace PhonyClubDenmark.Business
+namespace PhonyClubDenmark.Website.Business
 {
     /// <summary>
     /// Extension methods for content

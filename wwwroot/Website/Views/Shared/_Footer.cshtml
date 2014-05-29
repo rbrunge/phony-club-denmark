@@ -1,0 +1,17 @@
+﻿@using EPiServer
+@using EPiServer.ServiceLocation
+@model PhonyClubDenmark.Website.Models.ViewModels.IPageViewModel<PhonyClubDenmark.Website.Models.Pages.SitePageData>
+
+@{
+    var contentLoader = ServiceLocator.Current.GetInstance<IContentLoader>();
+}
+
+@* EMPTY FOR NOW
+    
+    @Html.PropertyFor(x => x.Layout.Address)
+    @Html.PropertyFor(x => x.Layout.CvrNumber)
+    @Html.PropertyFor(x => x.Layout.MailAddress)
+    @Html.PropertyFor(x => x.Layout.PhoneNumberLabel)
+    @Html.PropertyFor(x => x.Layout.PhoneNumber)
+    
+*@

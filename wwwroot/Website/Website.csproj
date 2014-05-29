@@ -254,8 +254,6 @@
     <Compile Include="Business\Initialization\OrderFormEditTabs.cs" />
     <Compile Include="Business\PageContextActionFilter.cs" />
     <Compile Include="Business\PageViewContextFactory.cs" />
-    <Compile Include="Business\ProductArticleEditorDescriptor.cs" />
-    <Compile Include="Business\Rendering\ContentAreaRowBalancer.cs" />
     <Compile Include="Business\Rendering\ErrorHandlingContentRenderer.cs" />
     <Compile Include="Business\Rendering\IContainerPage.cs" />
     <Compile Include="Business\Rendering\ICustomCssInContentArea.cs" />
@@ -267,11 +265,27 @@
     <Compile Include="Business\TypedEditorDescriptor.cs" />
     <Compile Include="Business\ViewRenderer.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\StartPageController.cs" />
+    <Compile Include="Controllers\DefaultPageController.cs" />
+    <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CustomPngHandler.cs" />
+    <Compile Include="Helpers\EpiServerNavigationHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\SearchHelper.cs" />
+    <Compile Include="Helpers\WebsiteHelper.cs" />
+    <Compile Include="Helpers\HtmlHelpers.cs" />
+    <Compile Include="Helpers\UrlHelpers.cs" />
     <Compile Include="Models\Blocks\SiteBlockData.cs" />
     <Compile Include="Models\Blocks\JumbotronBlock.cs" />
+    <Compile Include="Models\Pages\ContainerPage.cs" />
+    <Compile Include="Models\Pages\CookiePolicyPage.cs" />
+    <Compile Include="Models\Pages\CoverLayoutPage.cs" />
+    <Compile Include="Models\Pages\StartPage.cs" />
+    <Compile Include="Models\Pages\SitePageData.cs" />
+    <Compile Include="Models\Pages\StandardLayoutPage.cs" />
     <Compile Include="Models\SiteImageUrl.cs" />
     <Compile Include="Models\SiteContentType.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
@@ -283,6 +297,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ResourcesModels.resx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\IPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\LayoutModel.cs" />
+    <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\ResourcesLabels.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -291,10 +308,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\Pages\" />
     <Folder Include="Models\Properties\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -303,6 +317,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\carousel.css" />
     <Content Include="Content\cover.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -316,7 +331,12 @@
     <Content Include="Scripts\docs.min.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\website.main.js" />
     <Content Include="Static\404.html" />
+    <Content Include="Static\Images\404.jpg" />
+    <Content Include="Static\Images\contenttype-background.png" />
+    <Content Include="Static\Images\cookie-policy.png" />
+    <Content Include="Static\Images\folder.png" />
     <Content Include="Static\sample-bootstrap-cover.html" />
     <Content Include="Static\sample-bootstrap-caroussel.html" />
     <Content Include="Static\Images\20140417_093020.JPG" />
@@ -331,6 +351,11 @@
     <Content Include="modules\_protected\Shell\EPiServer.Shell.UI.zip" />
     <Content Include="modules\_protected\CMS\web.config" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <Content Include="Views\Shared\Layouts\_LayoutPageDefault.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

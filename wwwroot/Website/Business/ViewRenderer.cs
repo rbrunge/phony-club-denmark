@@ -11,7 +11,7 @@ using System.Web.Routing;
 // Ebita note:
 // Used to render a view statically. I.e. Using razor templates for writing content in mails.
 // 
-namespace PhonyClubDenmark.Business
+namespace PhonyClubDenmark.Website.Business
 {
     /// <summary>
     /// Class that renders MVC views to a string using the

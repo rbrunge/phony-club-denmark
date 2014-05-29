@@ -2,7 +2,7 @@
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 
-namespace PhonyClubDenmark.Business.Initialization
+namespace PhonyClubDenmark.Website.Business.Initialization
 {
     [InitializableModule]
     public class BundleConfig : IInitializableModule

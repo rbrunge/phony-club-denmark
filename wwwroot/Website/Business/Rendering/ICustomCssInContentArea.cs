@@ -1,4 +1,4 @@
-﻿namespace PhonyClubDenmark.Business.Rendering
+﻿namespace PhonyClubDenmark.Website.Business.Rendering
 {
     /// <summary>
     /// Defines a property for CSS class(es) which will be added to the class

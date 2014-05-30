@@ -14,13 +14,14 @@ echo.
 @echo ------------------------------------------------------------------------
 @echo 2. Copy files to NuGet folder
 @echo ------------------------------------------------------------------------
-@xcopy ..\wwwroot\website\*.cs content\%framework%\*.cs.pp /S /Q /EXCLUDE:dontcopy.txt
-@xcopy ..\wwwroot\website\*.resx content\%framework%\*.resx /S /Q
+@xcopy ..\wwwroot\website\*.* content\%framework%\*.* /S /Q /EXCLUDE:dontcopy.txt
+@xcopy ..\wwwroot\website\content\c*.* content\%framework%\Content\*.* /Q
+@xcopy ..\wwwroot\website\scripts\docs.min.js content\%framework%\scripts\*.* /Q
 
 echo.
 echo.
 
-@for /R %%x in (*.pp) do ren "%%x" *.cs.pp
+@for /R %%x in (*.cs) do ren "%%x" *.cs.pp
 @FORFILES /P "Content" /M *.pp /S /C "Cmd /C %replacetext% @path PhonyClubDenmark.Website $rootnamespace$ /I"
 
 @echo ------------------------------------------------------------------------
@@ -33,3 +34,5 @@ echo.
 @echo ------------------------------------------------------------------------
 @echo DONE
 @echo ------------------------------------------------------------------------
+pause
+:end

@@ -309,6 +309,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Properties\" />
+    <Folder Include="Views\Blocks\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -356,6 +357,7 @@
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\PagePartials\_BootstrapCoverPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

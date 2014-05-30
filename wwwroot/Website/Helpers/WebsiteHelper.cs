@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Reflection;
+using System.Web;
+using System.Web.Mvc;
 
 namespace PhonyClubDenmark.Website.Helpers
 {
@@ -50,5 +52,16 @@ namespace PhonyClubDenmark.Website.Helpers
             return value;
         }
 
+        public static IHtmlString ToLineBreakString(this string original)
+        {
+            var parsed = string.Empty;
+            if (!string.IsNullOrEmpty(original))
+            {
+                parsed = HttpUtility.HtmlEncode(original);
+                parsed = parsed.Replace("\n", "<br />");
+            }
+
+            return new MvcHtmlString(parsed);
+        }
     }
 }

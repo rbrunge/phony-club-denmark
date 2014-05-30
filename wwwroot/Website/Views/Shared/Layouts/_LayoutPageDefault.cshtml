@@ -11,8 +11,9 @@
     <title>@Model.CurrentPage.MetaTitle</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" />
-    <link href="/Content/cover.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/Content/Site.css?v=@WebsiteHelper.GetVersion()" media="all">
+
+    @RenderSection("Css", required: false)
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="SHORTCUT ICON" href="/favicon.ico" />

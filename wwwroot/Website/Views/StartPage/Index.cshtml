@@ -1,41 +1,33 @@
-﻿@model PhonyClubDenmark.Website.Models.ViewModels.PageViewModel<PhonyClubDenmark.Website.Models.Pages.StartPage>
+﻿@using EPiServer.Web.Routing
+@model PhonyClubDenmark.Website.Models.ViewModels.PageViewModel<PhonyClubDenmark.Website.Models.Pages.StartPage>
 
-<div class="site-wrapper">
-
-    <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-            <div class="masthead clearfix">
-@*                <div class="inner">
-                    <h3 class="masthead-brand">Cover</h3>
-                    <ul class="nav masthead-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>*@
-            </div>
-
-            <div class="inner cover">
-                <h1 class="cover-heading">@Html.PropertyFor(m => m.CurrentPage.Title)</h1>
-                <p class="lead">@Html.PropertyFor(m => m.CurrentPage.TeaserText)</p>
-                @if (!string.IsNullOrEmpty(Model.CurrentPage.CallToActionLabel))
+@{
+    var _partialModel = new PhonyClubDenmark.Website.Models.Pages.CoverLayoutPage
+        {
+            BackgroundImage   = Model.CurrentPage.BackgroundImage,
+            CallToActionLink = Model.CurrentPage.CallToActionLink,
+            CallToActionLabel = Model.CurrentPage.CallToActionLabel,
+            Title =  Model.CurrentPage.Title,
+            TeaserText = Model.CurrentPage.TeaserText,
+        };
+        <text>
+            @section Css
+            {
+                <link href="/Content/cover.css" rel="stylesheet" />
+        
+                @if (_partialModel.BackgroundImage != null)
                 {
-                    <p class="lead">
-<a class="btn btn-lg btn-default" href="@Url.ContentUrl(Model.CurrentPage.CallToActionLink)" target="@(string.IsNullOrEmpty(Model.CurrentPage.CallToActionLink.Authority) ? "" : "_blank")">@Html.PropertyFor(m => m.CurrentPage.CallToActionLabel)</a>                        
-                    </p>
+                    var url = @UrlResolver.Current.GetUrl(_partialModel.BackgroundImage);
+                    <style>
+                        body {
+                            background-image: url(@url);
+                        }
+                    </style>
                 }
-            </div>
+            }
+        </text>
+         
+}
 
-            <div class="mastfoot">
-                <div class="inner">
-@*                    <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@@mdo</a>.</p>*@
-                </div>
-            </div>
 
-        </div>
-
-    </div>
-
-</div>
+@{Html.RenderPartial("~/Views/Shared/PagePartials/_BootstrapCoverPage.cshtml", _partialModel);}

@@ -2,11 +2,13 @@
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
+using EPiServer.DataAnnotations;
 using EPiServer.Web;
 
 namespace PhonyClubDenmark.Website.Models.Pages
 {
-    public abstract class CoverLayoutPage : SitePageData
+    [ContentType(AvailableInEditMode = false)]
+    public  class CoverLayoutPage : SitePageData
     {
         [Display(ResourceType = typeof(ResourcesModels), Name = "CoverLayoutPage_BackgroundImage",
             GroupName = SystemTabNames.Content, Order = 500)]

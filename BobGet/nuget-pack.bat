@@ -22,6 +22,7 @@ echo.
 echo.
 
 @for /R %%x in (*.cs) do ren "%%x" *.cs.pp
+@for /R %%x in (*.cshtml) do ren "%%x" *.cshtml.pp
 @FORFILES /P "Content" /M *.pp /S /C "Cmd /C %replacetext% @path PhonyClubDenmark.Website $rootnamespace$ /I"
 
 @echo ------------------------------------------------------------------------

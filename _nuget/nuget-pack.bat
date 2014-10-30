@@ -14,6 +14,7 @@ echo.
 @echo ------------------------------------------------------------------------
 @echo 2. Copy files to NuGet folder
 @echo ------------------------------------------------------------------------
+@xcopy web.config.* content\%framework%\
 @xcopy ..\wwwroot\website\*.* content\%framework%\*.* /S /Q /EXCLUDE:dontcopy.txt
 @xcopy ..\wwwroot\website\content\c*.* content\%framework%\Content\*.* /Q
 @xcopy ..\wwwroot\website\scripts\docs.min.js content\%framework%\scripts\*.* /Q

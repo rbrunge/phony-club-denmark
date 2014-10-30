@@ -10,7 +10,7 @@ namespace PhonyClubDenmark.Website.Models.Pages
     /// <summary>
     /// Used for the site's start page and also acts as a container for site settings.
     /// </summary>
-    [ContentType(DisplayName = "Privat/forsiden", GUID = "{82C8B2B1-26A7-486E-9220-ABDE9F1502ED}",
+    [ContentType(DisplayName = "Start Page", GUID = "{82C8B2B1-26A7-486E-9220-ABDE9F1502ED}",
         GroupName = Constants.GroupNames.Specialized, Description = "")]
     [SiteImageUrl]
     [AvailableContentTypes(

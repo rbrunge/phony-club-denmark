@@ -1,0 +1,14 @@
+\obj\
+\bin\
+\app_data\
+\fonts\
+\scripts\
+\Content\
+.config
+.csproj
+.user
+global.asax
+global.asax.cs
+ResourcesModels.Designer.cs
+ResourcesLabels.Designer.cs
+AssemblyInfo.cs

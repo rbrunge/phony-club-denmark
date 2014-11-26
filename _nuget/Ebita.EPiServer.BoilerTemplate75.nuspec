@@ -5,13 +5,13 @@
 -->
   <metadata>
     <id>Ebita.EPiServer.BoilerTemplate75</id>
-    <version>1.1</version>
+    <version>1.3</version>
     <authors>Robert Runge</authors>
     <owners>Robert Runge</owners>
     <iconUrl>https://dl.dropboxusercontent.com/u/83212612/Ebita_logo_RGB.png</iconUrl>
 	<projectUrl>https://github.com/rbrunge/phony-club-denmark/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Build a communication site fast. Get the first page up and running in only a few minutes. Adds classes to an existing EPiServer MVC web-project which will get you started really fast</description>
+    <description>Get started quick - and start build. Get the first page up and running in only a few minutes. Adds classes to an existing EPiServer MVC web-project.</description>
     <tags>MVC5 boilertemplate template Twitter-Bootstrap jQuery .net45</tags>
     <dependencies>
 	  <dependency id="Microsoft.AspNet.Mvc" version="5.2.2" />

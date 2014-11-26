@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-	<system.webServer xdt:Transform="InsertIfMissing">
-		<handlers xdt:Transform="InsertIfMissing">
-			<add name="pngs" verb="*" path="static/images/*/epi-icon.png" type="$rootnamespace$.Helpers.CustomPngHandler, $rootnamespace$, Version=1.0.0.0, Culture=neutral" preCondition="managedHandler"  xdt:Transform="Insert"/>
-		</handlers>
-	</system.webServer>
-</configuration>
-
